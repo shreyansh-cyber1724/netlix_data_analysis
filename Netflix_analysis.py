@@ -15,7 +15,15 @@ mising = df.isnull().sum()
 mising = mising[mising > 0] #with boolean masking to get only missing data count
 print(mising)
 
+#filling missing data
+df["director"].fillna("Unknown" , inplace=True) 
+df["cast"].fillna("Unknown", inplace = True)
+df["country"].fillna("Unknown", inplace = True)
+df["rating"].fillna("Unknown", inplace=True)
 
+#droping row with 
+df.dropna(subset =["date_added"] , inplace=True)
+df.dropna(subset=["duration"],)
 
 
 
