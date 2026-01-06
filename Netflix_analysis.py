@@ -11,6 +11,12 @@ print(df.isnull().sum()) # for getting count of null value in coloumn
 #now we got to find percentage missing value with this 
 print(df.isnull().sum() / df.shape[0] * 100)
 
+mising = df.isnull().sum()
+mising = mising[mising > 0] #with boolean masking to get only missing data count
+print(mising)
+
+
+
 
 
 #for getting netflix data's important inspection
