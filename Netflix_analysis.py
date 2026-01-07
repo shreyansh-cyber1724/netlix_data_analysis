@@ -16,14 +16,17 @@ mising = mising[mising > 0] #with boolean masking to get only missing data count
 print(mising)
 
 #filling missing data
-df["director"].fillna("Unknown" , inplace=True) 
-df["cast"].fillna("Unknown", inplace = True)
-df["country"].fillna("Unknown", inplace = True)
-df["rating"].fillna("Unknown", inplace=True)
+df["director"] = df["director"].fillna("Unknown") 
+df["cast"] = df["cast"].fillna("Unknown")
+df["country"] = df["country"].fillna("Unknown")
+df["rating"] = df["rating"].fillna("Unknown")
 
 #droping row with 
-df.dropna(subset =["date_added"] , inplace=True)
-df.dropna(subset=["duration"],)
+df = df.dropna(subset =["date_added"])
+df = df.dropna(subset=["duration"])
+
+#groupby
+
 
 
 
